@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transactions
+{% endblock %}
+
+{% block main %}
+
+<table style="width: 100%">
+    <tr>
+        <th>Symbol</th>
+        <th>Shares</th>
+        <th>Price</th>
+        <th>Time</th>
+    </tr>
+    {% for stock in transactions %}
+    <tr>
+        <td>{{ stock.stock }}</td>
+        <td>{{ stock.shares }}</td>
+        <td>{{ stock.Total }}</td>
+        <td>{{ stock.time }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
